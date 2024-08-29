@@ -7,7 +7,7 @@ const app = express()
 
 dotenv.config()
 
-const PORT = process.env.PORT||8001
+const PORT = process.env.PORT || 8001
 
 app.get("/login", (req, res) => {
 
