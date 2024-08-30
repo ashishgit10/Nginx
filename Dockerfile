@@ -1,7 +1,8 @@
 FROM node:slim
 WORKDIR /app
-COPY . /app/
+COPY package*.json ./
 RUN npm install
-
-EXPOSE 8000
-CMD ["node", "index.js"]
+COPY . .
+ENV PORT=8000
+EXPOSE 8001
+CMD ["npm", "start"]
